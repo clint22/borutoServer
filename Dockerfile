@@ -1,8 +1,8 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:11-jdk-slim
 
-ENV APP_HOME /app
-WORKDIR $APP_HOME
+WORKDIR /app
+COPY build/libs/*.jar app.jar
 
-COPY build/libs/fat.jar $APP_HOME/fat.jar
+EXPOSE 8080
 
-CMD ["java", "-jar", "fat.jar"]
+CMD ["java", "-jar", "app.jar"]

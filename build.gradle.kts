@@ -18,9 +18,17 @@ application {
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
 
-ktor {
+/*ktor {
     fatJar {
         archiveFileName.set("fat.jar")
+    }
+}*/
+
+tasks {
+    withType<Jar> {
+        manifest {
+            attributes["Main-Class"] = "com.example.borutoserver.ApplicationKt"
+        }
     }
 }
 
