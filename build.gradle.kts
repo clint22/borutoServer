@@ -18,6 +18,7 @@ application {
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
 
+// build.gradle.kts
 ktor {
     fatJar {
         archiveFileName.set("fat.jar")
