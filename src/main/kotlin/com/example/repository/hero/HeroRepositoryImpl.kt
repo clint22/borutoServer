@@ -1,4 +1,4 @@
-package com.example.repository
+package com.example.repository.hero
 
 import com.example.models.ApiResponse
 import com.example.models.Hero
